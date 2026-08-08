@@ -1,0 +1,12 @@
+node_modules/
+test-results/
+.DS_Store
+*.log
+QA Practical Assessment.pdf
+
+# Playwright generated artifacts
+playwright-report/data/
+
+# Credentials / browser state
+PrismStructure/API/testdata/AccessToken.json
+PrismStructure/storeBrowserState.json

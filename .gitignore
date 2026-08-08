@@ -10,3 +10,4 @@ playwright-report/data/
 # Credentials / browser state
 PrismStructure/API/testdata/AccessToken.json
 PrismStructure/storeBrowserState.json
+PrismStructure/playwright-report/

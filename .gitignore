@@ -1,13 +1,20 @@
+# Dependencies
 node_modules/
+
+# Test execution artifacts
 test-results/
-.DS_Store
+playwright-report/
 *.log
+
+# OS files
+.DS_Store
+
+# Local / generated files
 QA Practical Assessment.pdf
 
-# Playwright generated artifacts
-playwright-report/data/
-
-# Credentials / browser state
+# Credentials / local browser state
 PrismStructure/API/testdata/AccessToken.json
 PrismStructure/storeBrowserState.json
-PrismStructure/playwright-report/
+
+# Generated / intermediate files
+PrismStructure/extractedImg/

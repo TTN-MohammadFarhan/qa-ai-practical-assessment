@@ -5,9 +5,9 @@ TC-UI-003,REQ-UI-003,Product Details,Verify Product Details,Smoke,High,Yes,Searc
 TC-UI-004,REQ-UI-004,Cart,Add Product to Cart,Smoke,Critical,Yes,Product Details page is open,Click Add to Cart > Open Cart,Product is successfully added to cart,Automated,tests/Toolshop/04_AddToCart.spec.js
 TC-UI-005,REQ-UI-005,Cart,Update Cart Quantity,Regression,High,Yes,Product exists in cart,Update quantity to 2,Cart quantity updates successfully,Automated,tests/Toolshop/05_Cart.spec.js
 TC-UI-006,REQ-UI-006,Checkout,Guest Checkout,Regression,Critical,Yes,Product exists in cart,Proceed to checkout > Continue as Guest > Complete checkout,Checkout completes successfully,Automated,tests/Toolshop/06_CheckoutGuest.spec.js
-TC-API-001,REQ-API-001,Products,Get All Products,Smoke,High,Yes,API is available,Send GET /products,200 OK with product list,Automated,tests/API Test/03_ToolshopAPI.spec.js
-TC-API-002,REQ-API-002,Products,Get Single Product,Smoke,High,Yes,Valid product exists,Send GET /products/{id},200 OK with product details,Automated,tests/API Test/03_ToolshopAPI.spec.js
-TC-API-003,REQ-API-003,Products,Search Product API,Smoke,High,Yes,API is available,Search products using query parameter,Matching products are returned,Automated,tests/API Test/03_ToolshopAPI.spec.js
-TC-API-004,REQ-API-004,Categories,Get Categories,Regression,Medium,Yes,API is available,Send GET /categories,Categories are returned successfully,Automated,tests/API Test/03_ToolshopAPI.spec.js
-TC-API-005,REQ-API-005,Brands,Get Brands,Regression,Medium,Yes,API is available,Send GET /brands,Brands are returned successfully,Automated,tests/API Test/03_ToolshopAPI.spec.js
-TC-API-006,REQ-API-006,Products,Invalid Product Validation,Regression,High,Yes,API is available,Send GET request with invalid product id,404 Not Found returned,Automated,tests/API Test/03_ToolshopAPI.spec.js
+TC-API-001,REQ-API-001,Products,Get All Products,Smoke,High,Yes,API is available,Send GET /products,200 OK with product list,Automated,tests/API Test/01_ToolshopAPI.spec.js
+TC-API-002,REQ-API-002,Products,Get Single Product,Smoke,High,Yes,Valid product exists,Send GET /products/{id},200 OK with product details,Automated,tests/API Test/01_ToolshopAPI.spec.js
+TC-API-003,REQ-API-003,Products,Search Product API,Smoke,High,Yes,API is available,Search products using query parameter,Matching products are returned,Automated,tests/API Test/01_ToolshopAPI.spec.js
+TC-API-004,REQ-API-004,Categories,Get Categories,Regression,Medium,Yes,API is available,Send GET /categories,Categories are returned successfully,Automated,tests/API Test/01_ToolshopAPI.spec.js
+TC-API-005,REQ-API-005,Brands,Get Brands,Regression,Medium,Yes,API is available,Send GET /brands,Brands are returned successfully,Automated,tests/API Test/01_ToolshopAPI.spec.js
+TC-API-006,REQ-API-006,Products,Invalid Product Validation,Regression,High,Yes,API is available,Send GET request with invalid product id,404 Not Found returned,Automated,tests/API Test/01_ToolshopAPI.spec.js

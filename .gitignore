@@ -18,3 +18,4 @@ PrismStructure/storeBrowserState.json
 
 # Generated / intermediate files
 PrismStructure/extractedImg/
+.DS_Store

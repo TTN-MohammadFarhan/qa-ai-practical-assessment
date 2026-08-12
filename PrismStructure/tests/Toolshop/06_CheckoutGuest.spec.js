@@ -37,8 +37,19 @@ test("Guest Checkout", async ({ page }) => {
     await page.locator('[data-test="payment-method"]').selectOption("buy-now-pay-later");
     await page.locator('[data-test="monthly_installments"]').selectOption("3");
 
+    // Step 1: Submit payment
     await page.locator('[data-test="finish"]').click();
 
-    await expect(page).toHaveURL(/payment-success|invoice|checkout|success/);
+    // Verify payment was successful
+    await expect(
+        page.locator('[data-test="payment-success-message"]')
+    ).toBeVisible();
 
+    // Step 2: Confirm the successful payment/order
+    await page.locator('[data-test="finish"]').click();
+
+    // Verify final order confirmation
+    await expect(
+        page.getByText(/Thanks for your order!/i)
+    ).toBeVisible();
 });

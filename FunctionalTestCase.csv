@@ -11,3 +11,5 @@ TC-API-003,REQ-API-003,Products,Search Product API,Smoke,High,Yes,API is availab
 TC-API-004,REQ-API-004,Categories,Get Categories,Regression,Medium,Yes,API is available,Send GET /categories,Categories are returned successfully,Automated,tests/API Test/01_ToolshopAPI.spec.js
 TC-API-005,REQ-API-005,Brands,Get Brands,Regression,Medium,Yes,API is available,Send GET /brands,Brands are returned successfully,Automated,tests/API Test/01_ToolshopAPI.spec.js
 TC-API-006,REQ-API-006,Products,Invalid Product Validation,Regression,High,Yes,API is available,Send GET request with invalid product id,404 Not Found returned,Automated,tests/API Test/01_ToolshopAPI.spec.js
+TC-UI-007,REQ-UI-007,Authentication,User Registration,Smoke,Critical,Yes,Application is accessible,Open registration page > Enter valid user details > Submit registration,User account is successfully registered,Automated,tests/Authentication/01_RegistrationLogin.spec.js
+TC-UI-008,REQ-UI-008,Authentication,User Login,Smoke,Critical,Yes,User is registered,Open login page > Enter valid credentials > Submit login,User is successfully authenticated,Automated,tests/Authentication/01_RegistrationLogin.spec.js

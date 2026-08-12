@@ -59,6 +59,10 @@ qa-ai-practical-assessment/
 - Add Product to Cart
 - Update Cart Quantity
 - Guest Checkout
+- User Registration
+- User Login
+- Two-Step Checkout Confirmation
+- Invoice Verification
 
 ---
 

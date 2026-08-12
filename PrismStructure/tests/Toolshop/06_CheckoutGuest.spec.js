@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test");
 const { HomePage } = require("../../Toolshop/pageobjects/HomePage");
 
-test("Guest Checkout", async ({ page }) => {
+test("Guest Checkout with Two-Step Confirmation and Invoice Verification", async ({ page }) => {
 
     const home = new HomePage(page);
 
@@ -20,7 +20,9 @@ test("Guest Checkout", async ({ page }) => {
 
     await page.getByRole("tab", { name: "Continue as Guest" }).click();
 
-    await page.locator('[data-test="guest-email"]').fill(`guest${Date.now()}@gmail.com`);
+    await page.locator('[data-test="guest-email"]').fill(
+        `guest${Date.now()}@gmail.com`
+    );
     await page.locator('[data-test="guest-first-name"]').fill("Mohammad");
     await page.locator('[data-test="guest-last-name"]').fill("Farhan");
 
@@ -34,22 +36,29 @@ test("Guest Checkout", async ({ page }) => {
 
     await page.locator('[data-test="proceed-3"]').click();
 
-    await page.locator('[data-test="payment-method"]').selectOption("buy-now-pay-later");
-    await page.locator('[data-test="monthly_installments"]').selectOption("3");
+    await page.locator('[data-test="payment-method"]')
+        .selectOption("buy-now-pay-later");
+
+    await page.locator('[data-test="monthly_installments"]')
+        .selectOption("3");
 
     // Step 1: Submit payment
     await page.locator('[data-test="finish"]').click();
 
-    // Verify payment was successful
+    // Verify payment success
     await expect(
         page.locator('[data-test="payment-success-message"]')
     ).toBeVisible();
 
-    // Step 2: Confirm the successful payment/order
+    // Step 2: Confirm order
     await page.locator('[data-test="finish"]').click();
 
-    // Verify final order confirmation
+    // Verify final order confirmation and invoice number
     await expect(
         page.getByText(/Thanks for your order!/i)
+    ).toBeVisible();
+
+    await expect(
+        page.getByText(/invoice number is INV-\d+/i)
     ).toBeVisible();
 });

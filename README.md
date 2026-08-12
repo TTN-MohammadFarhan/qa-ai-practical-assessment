@@ -143,11 +143,28 @@ All AI-generated outputs were manually reviewed, validated, and refined before i
 
 Current Status
 
-- 13/13 Tests Passing
+- 12/13 Tests Passing
+- 1 Known Application Behavior Failure
 - HTML Report Generated
 - BRD Deliverables Included
 
 ---
+
+
+## Known Application Behavior
+
+### Search Product Result Mismatch
+
+The Search Product automation test currently exposes a search-result mismatch in the application.
+
+- **Test:** `tests/Toolshop/01_Search.spec.js`
+- **Expected:** The first displayed product should contain the searched keyword `Bolt`
+- **Actual:** The first displayed product was `Combination Pliers`
+- **Result:** Test fails as expected because the assertion correctly detects the mismatch.
+- **Classification:** Application/search behavior issue, not an automation assertion workaround.
+
+The failure is intentionally retained so that the automation does not hide a potential product-search defect.
+
 
 # Author
 
